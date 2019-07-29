@@ -11,6 +11,14 @@ namespace OOP_BankingProject {
             return base.Print() + $"| {intRate}";
         }
 
+        public void changeRate(double value) {
+            if ((this.intRate + value) >= 0) {
+                this.intRate += value;
+            } else {
+                Console.WriteLine("Invalid Change in Interest: Interest Rate cannot be less than 0");
+            }
+        }
+
         public void intPay (int weeks) {
             double intToBePaid = this.intRate / 52 * weeks * (double)this.GetBalance();
             this.Deposit((decimal)intToBePaid);

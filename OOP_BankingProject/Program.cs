@@ -8,12 +8,15 @@ namespace OOP_BankingProject {
             newSav.number = "Sav001";
             newSav.name = "Big Savings";
             newSav.Deposit(4000);
+            newSav.changeRate(-0.04);
+
 
             MoneyMarket mmAcct = new MoneyMarket();
             mmAcct.number = "1003";
             mmAcct.name = "Test MM";
             mmAcct.Deposit(500);
             mmAcct.intPay(45);
+            mmAcct.changeRate(0.05);
 
             Account acct = new Account();
             acct.number = "1001";

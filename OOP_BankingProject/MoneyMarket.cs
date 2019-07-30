@@ -11,12 +11,15 @@ namespace OOP_BankingProject {
             return base.Print() + $"| {intRate}";
         }
 
-        public void changeRate(double value) {
+        public bool changeRate(double value) {
+            bool success = false;
             if ((this.intRate + value) >= 0) {
                 this.intRate += value;
+                success = true;
             } else {
                 Console.WriteLine("Invalid Change in Interest: Interest Rate cannot be less than 0");
             }
+            return success;
         }
 
         public void intPay (int weeks) {

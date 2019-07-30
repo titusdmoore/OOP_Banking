@@ -10,6 +10,12 @@ namespace OOP_BankingProject {
             newSav.Deposit(4000);
             newSav.changeRate(-0.04);
 
+            Checking check1 = new Checking();
+            check1.Deposit(10000000.00m);
+            check1.Pay(1002, 354.34m);
+            check1.name = "Check001";
+            check1.number = "Chk0034";
+
 
             MoneyMarket mmAcct = new MoneyMarket();
             mmAcct.number = "1003";
@@ -23,7 +29,7 @@ namespace OOP_BankingProject {
             acct.name = "test account";
             acct.Deposit(20);
 
-            Account[] Accounts = { acct, mmAcct, newSav };
+            Account[] Accounts = { acct, mmAcct, newSav, check1 };
 
             foreach (var account in Accounts) {
                 Console.WriteLine(account.Print());

@@ -11,8 +11,11 @@ namespace OOP_BankingProject {
         }
 
         public bool Pay(int ChkNbr, decimal Amount) {
-            this.ChkNbr = ChkNbr;
+
             if (this.Withdraw(Amount)) {
+                 
+                this.ChkNbr = ChkNbr;
+                 
                 this.Withdraw(Amount);
                 return true;
             }else {

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace OOP_BankingProject {
-    public class Account {
+    public abstract class Account {
 
         public string number { get; set; }
         private decimal balance { get; set; } = 0m;
         public string name { get; set; }
         public bool isActive { get; set; } = true;
+
+        public abstract void Save();
 
         public virtual string Print() {
             return $"{this.number} | {this.balance} | {this.name} ";

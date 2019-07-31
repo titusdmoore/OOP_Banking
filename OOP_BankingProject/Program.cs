@@ -4,6 +4,7 @@ namespace OOP_BankingProject {
     class Program {
         static void Main(string[] args) {
 
+
             Savings newSav = new Savings();
             newSav.number = "Sav001";
             newSav.name = "Big Savings";
@@ -19,17 +20,12 @@ namespace OOP_BankingProject {
 
             MoneyMarket mmAcct = new MoneyMarket();
             mmAcct.number = "1003";
+            mmAcct.changeRate(0.05);
             mmAcct.name = "Test MM";
             mmAcct.Deposit(500);
             mmAcct.intPay(45);
-            mmAcct.changeRate(0.05);
 
-            Account acct = new Account();
-            acct.number = "1001";
-            acct.name = "test account";
-            acct.Deposit(20);
-
-            Account[] Accounts = { acct, mmAcct, newSav, check1 };
+            Account[] Accounts = {mmAcct, newSav, check1 };
 
             foreach (var account in Accounts) {
                 Console.WriteLine(account.Print());
